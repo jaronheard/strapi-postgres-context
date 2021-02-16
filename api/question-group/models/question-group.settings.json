@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_groups",
+  "info": {
+    "name": "Question Group",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "question_group"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "callToAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.call-to-action"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answers",
+  "info": {
+    "name": "Answer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "important": {
+      "type": "boolean"
+    },
+    "answerBoolean": {
+      "type": "boolean"
+    },
+    "answerShortText": {
+      "type": "text"
+    },
+    "answerLongText": {
+      "type": "richtext"
+    },
+    "source": {
+      "type": "string"
+    },
+    "question": {
+      "model": "question"
+    },
+    "dataset": {
+      "via": "answers",
+      "model": "dataset"
+    }
+  }
+}

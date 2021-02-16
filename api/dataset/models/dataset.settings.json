@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "datasets",
+  "info": {
+    "name": "dataset",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "richtext"
+    },
+    "context": {
+      "type": "json"
+    },
+    "successes": {
+      "type": "richtext"
+    },
+    "challenges": {
+      "type": "richtext"
+    },
+    "sandtrap": {
+      "type": "richtext"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "answers": {
+      "collection": "answer",
+      "via": "dataset"
+    }
+  }
+}

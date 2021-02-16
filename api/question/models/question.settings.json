@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "name": "Question"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "questionType": {
+      "type": "enumeration",
+      "enum": [
+        "short_answer",
+        "long_answer",
+        "yes_no",
+        "yes_no_with_short_answer",
+        "yes_no_with_long_answer"
+      ]
+    },
+    "questionText": {
+      "type": "string"
+    },
+    "questionTextYes": {
+      "type": "string"
+    },
+    "questionTextNo": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "question_group": {
+      "via": "questions",
+      "model": "question-group"
+    }
+  }
+}
